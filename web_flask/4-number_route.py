@@ -2,8 +2,8 @@
 """Starting a web application with Flask"""
 from flask import Flask
 
-
 app = Flask(__name__)
+
 
 #route to display Hello HBNB!
 @app.route('/', strict_slashes=False)
@@ -26,8 +26,8 @@ def python_text(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 #route to display '<n> is a number'
-@app.route('/number/<n>, strict_slashes=False')
-def number_n(n:int):
+@app.route('/number/<int:n>, strict_slashes=False')
+def number_n(n):
     return "{} is a number".format(n)
 
 
