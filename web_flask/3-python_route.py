@@ -15,13 +15,14 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>, strict_slashes=False')
+@app.route('/c/<string:text>, strict_slashes=False')
 def c_text(text):
     return "C {}".format(text.replace('_', ' '))
 
 
+@app.route('/python, strict_slashes=False')
 @app.route('/python/<string:text>, strict_slashes=False')
-def python_text(text='is_cool'):
+def python_text(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
