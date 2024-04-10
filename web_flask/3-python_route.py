@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Starting a web application with Flask"""
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def c_text(text):
     return "C {}".format(text.replace('_', ' '))
 
 #route to display 'Python <text>'
-@app.route('/python/<text>, strict_slashes=False')
+@app.route('/python/<str:text>, strict_slashes=False')
 def python_text(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
