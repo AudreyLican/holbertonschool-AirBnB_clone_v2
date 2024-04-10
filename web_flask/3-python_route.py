@@ -20,8 +20,8 @@ def c_text(text):
     return "C {}".format(text.replace('_', ' '))
 
 
-@app.route('/python/<str:text>, strict_slashes=False')
-def python_text(text='is cool'):
+@app.route('/python/<string:text>, strict_slashes=False')
+def python_text(text='is_cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
