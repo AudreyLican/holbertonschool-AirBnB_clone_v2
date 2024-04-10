@@ -15,18 +15,18 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<string:text>, strict_slashes=False')
+@app.route('/c/<string:text>', strict_slashes=False)
 def c_text(text):
     return "C {}".format(text.replace('_', ' '))
 
 
-@app.route('/python, strict_slashes=False')
-@app.route('/python/<string:text>, strict_slashes=False')
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<string:text>', strict_slashes=False)
 def python_text(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
-@app.route('/number/<int:n>, strict_slashes=False')
+@app.route('/number/<int:n>', strict_slashes=False)
 def number_n(n):
     return "{} is a number".format(n)
 
