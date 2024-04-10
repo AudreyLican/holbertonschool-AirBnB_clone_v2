@@ -2,15 +2,15 @@
 """Starting a web application with Flask"""
 from flask import Flask
 
-
 app = Flask(__name__)
+
 
 #route to display Hello HBNB!
 @app.route('/', strict_slashes=False)
 def hello():
     return "Hello HBNB!"
 
-##route to display HBNB
+#route to display HBNB
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     return "HBNB"
@@ -22,7 +22,7 @@ def c_text(text):
 
 #route to display 'Python <text>'
 @app.route('/python/<text>, strict_slashes=False')
-def python_text(text):
+def python_text(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
