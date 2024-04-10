@@ -2,13 +2,12 @@
 """Starting a web application with Flask"""
 from flask import Flask
 
-
 app = Flask(__name__)
 
-#define route
+
+#route to display Hello HBNB!
 @app.route('/', strict_slashes=False)
 def hello():
-    #display a message Hello HBNB!
     return "Hello HBNB!"
 
 @app.route('/hbnb', strict_slashes=False)
